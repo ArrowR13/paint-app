@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Ain't Paint</title>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="css/colorpicker.css" type="text/css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div id="sketch">
+            <div id="color_picker"></div>
+            <div id="tools">
+                <input id="size_picker" type="range" min="1" max="100" onchange="changeSize(this.value)" value="10"><br>
+                Brush size: <span id="size_value">10</span><br>
+                Scribble Mode On? <input id="scribble" type="checkbox" name="brush_settings" onclick="updateMode()"><br> 
+                <button id="erase_all"  type="button" onclick="eraseAll()">Erase All</button><br>
+                <input id="image_picker" type="range" min="0" max="2" value="0" onclick="drawBgImg(this.value)" onchange="drawBgImg(this.value)"><br>
+                Background Image: <span id="bg_value">None</span> <br>
+                <input type="text" id="custom_img" placeholder="Paste Image URL..." onchange="setImgURL(this.value)"> 
+                <input type="submit" id="submit" onclick="getImgFromURL()">
+            </div>
+        </div>
+        
+        <form id="data">
+            Mouse X: <span id="mousex">0</span>
+            Mouse Y: <span id="mousey">0</span>
+            <br>
+            Canvas X: <span id="canvasx">500</span>
+            Canvas Y: <span id="canvasy">500</span>
+        </form>
+    </body>
+    <footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/colorpicker.js"></script>
+        <script type="text/javascript" src="js/eye.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/layout.js?ver=1.0.2"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+</html>
