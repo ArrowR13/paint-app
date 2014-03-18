@@ -97,17 +97,12 @@ function updateMode (newValue) {
     scribble_on = document.getElementById("scribble").checked;
 }
 
-function derpderp() { }
-
 function eraseAll () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     otx.clearRect(0, 0, overlay.width, overlay.height);
     document.getElementById('bg_value').innerHTML='None';
     document.getElementById('custom_img').value='';
 }   
-function newFunction() {
-    derp();
-}
 
 function drawFunct() {
     var normalMode = function normalMode() {
