@@ -96,6 +96,9 @@ function changeColor (newValue) {
 function updateMode (newValue) {
     scribble_on = document.getElementById("scribble").checked;
 }
+
+function derpderp() { }
+
 function eraseAll () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     otx.clearRect(0, 0, overlay.width, overlay.height);
