@@ -105,6 +105,10 @@ function eraseAll () {
     document.getElementById('bg_value').innerHTML='None';
     document.getElementById('custom_img').value='';
 }   
+function newFunction() {
+    derp();
+}
+
 function drawFunct() {
     var normalMode = function normalMode() {
         ctx.lineTo(mouse.x, mouse.y);
